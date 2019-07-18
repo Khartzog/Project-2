@@ -1,5 +1,5 @@
 body {
-    background-image: url("journal.jpg");
+    background-image: url("./journal.jpg");
     background-blend-mode: lighten;
     background-attachment: fixed;
 }
