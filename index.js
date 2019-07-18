@@ -8,9 +8,18 @@ const connectionString = process.env.DATABASE_URL || "postgres://postgres:Kh6813
 
 const pool = new Pool({connectionString: connectionString}); 
 
-express()
+const app = express();
+
+app
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+  app.get('/signIn', function(req, res){
+    res.render('project-2/signIn.ejs');
+    res.end();
+  })
+
+  
