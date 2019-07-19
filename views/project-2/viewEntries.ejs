@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+        <!-- $userID = $_SESSION['user_id']; -->
+    <div class="textArea">
+    <center><h1>Here are your entries</h1></center><br>
+        
+    <form action="deleteEntry.php">
+        <!-- $joinedResults = $db->prepare("SELECT eu.*, j.journal_name FROM user_entry eu LEFT JOIN journal j ON eu.journal_id = j.journal_id WHERE eu.userid = $userID");
+        $joinedResults->execute();
+        while ($row = $joinedResults->fetch(PDO::FETCH_ASSOC)){
+          $journalName = $row['journal_name'];
+          $date = $row['entry_date'];
+          $content = $row['entry_content'];
+          $entry_id = $row['entry_id'];
+          echo '<input type="radio" name="entry" value="' . $entry_id . '">' . $date . '<br>' . $content . '<br><br>';
+        };       -->
+    <button type="submit" formaction="updateEntry.php">Edit Entry</button>
+    <button type="submit">Delete Entry</button><br>
+    </form>
+        
+        
+        <!-- $username = $_SESSION['user_name']; -->
+    <center><form action="mainPage.php">
+        <input type="hidden" id="username" name="username" value="">
+        <button type="submit">Back</button><br>
+        </form></center>';
+        </div>
+    
+</body>
+</html>
