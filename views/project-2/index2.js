@@ -44,4 +44,4 @@ app
       callback(null, result.rows);
 
     })
-  }
+  };
