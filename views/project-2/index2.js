@@ -24,5 +24,24 @@ app
 
   app.get('/viewEntries', function(req, res){
     res.render('project-2/viewEntries.ejs');
+    verifyUser();
     res.end();
   });
+
+  function verifyUser(username, callback){
+
+    var sql = "SELECT username FROM userinfo WHERE username = $1::string";
+    var params = [username];
+
+    pool.query(sql, params, function(err, result) {
+      if (err){
+        // console.log("there was an error with the database");
+        // console.log(err);
+        callback(err, null);
+      }
+    //   console.log("found DB result: " + JSON.stringify(result.rows));
+
+      callback(null, result.rows);
+
+    })
+  }
