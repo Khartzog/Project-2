@@ -22,7 +22,8 @@ app
     res.end();
   })
 
+  function signInAction(){
   app.get('/viewEntries', function(req, res){
     res.render('project-2/viewEntries.ejs');
     res.end();
-  })
+  })}
