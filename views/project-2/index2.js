@@ -25,7 +25,7 @@ app
   app.get('/viewEntries', function(req, res){
     res.render('project-2/viewEntries.ejs');
     console.log("In num 2");
-    //sverifyUser();
+    //verifyUser();
     res.end();
   });
 

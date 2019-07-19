@@ -22,17 +22,17 @@ app
     res.end();
   })
 
-  app.get('/viewEntries', function(req, res){
-    res.render('project-2/viewEntries.ejs');
-    var username = req.query.username;
-    console.log("I made it");
-    verifyUser(username, function(error, result){
-      console.log("back from the database with results: ", result);
-      res.json(result);
-    })
+  // app.get('/viewEntries', function(req, res){
+  //   res.render('project-2/viewEntries.ejs');
+  //   var username = req.query.username;
+  //   console.log("I made it");
+  //   verifyUser(username, function(error, result){
+  //     console.log("back from the database with results: ", result);
+  //     res.json(result);
+  //   })
 
-    res.end();
-  })
+  //   res.end();
+  // })
 
   function verifyUser(username, callback){
 
