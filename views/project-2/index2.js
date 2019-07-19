@@ -15,15 +15,14 @@ app
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
   app.get('/signIn', function(req, res){
     res.render('project-2/signIn.ejs');
     res.end();
   })
 
-  function signInAction(){
   app.get('/viewEntries', function(req, res){
     res.render('project-2/viewEntries.ejs');
     res.end();
-  })}
+  });
